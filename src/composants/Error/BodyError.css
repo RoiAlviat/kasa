@@ -1,0 +1,21 @@
+.BodyError-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 90vw;
+  height: 64vh;
+}
+.BodyError-container span {
+  display: flex;
+  align-items: center;
+  color: #FF6060;
+  font-size: 20vh;
+}
+.BodyError-container h2 {
+  color: #FF6060;
+}
+.BodyError-container h3 {
+  color: #FF6060;
+  text-decoration: underline;
+}/*# sourceMappingURL=BodyError.css.map */

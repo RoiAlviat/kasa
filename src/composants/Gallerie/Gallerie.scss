@@ -1,0 +1,72 @@
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+.gallerie-surcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+  background-color: #F6F6F6;
+  width: 90vw;
+  height: auto;
+  border-radius: 10px;
+
+  @include mobile {
+    background-color: white;
+    height: auto;
+  }
+
+  .gallerie-container {
+    @include mobile {
+      flex-direction: column;
+      justify-content: center;
+      gap: 35px;
+    }
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 85vw;
+
+    .gallerie-article {
+      position: relative;
+      margin-top: 25px;
+
+      img {
+        border-radius: 10px;
+        width: 25vw;
+        height: 25vw;
+        @include mobile {
+          width: 80vw;
+          height: 80vw;
+        }
+      }
+
+      @include mobile {
+        width: 80vw;
+        height: 80vw;
+      }
+
+
+      span {
+        @include mobile {
+          width: 20vw;
+        }
+
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 500;
+        color: #FFFFFF;
+
+      }
+    }
+  }
+}

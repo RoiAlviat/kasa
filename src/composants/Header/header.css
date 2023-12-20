@@ -1,0 +1,35 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+}
+@media (max-width: 768px) {
+  header img {
+    width: 20vw;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+header .header-right-container {
+  gap: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+}
+header .header-right-container a {
+  text-decoration: none;
+  width: auto;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: #FF6060;
+}
+@media (max-width: 768px) {
+  header .header-right-container a {
+    font-size: 3vw;
+  }
+}/*# sourceMappingURL=header.css.map */

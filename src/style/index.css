@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4vh;
+}
+
+.underlined {
+  text-decoration: underline !important;
+}
+
+.background-body {
+  margin-top: 35px;
+  position: relative;
+}
+.background-body .background-image {
+  width: 90vw;
+  border-radius: 15px;
+  height: 25vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(50%);
+  mix-blend-mode: darken;
+  background: #000000;
+}
+@media (max-width: 768px) {
+  .background-body .background-image {
+    height: 13vh;
+  }
+}
+.background-body .background-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Montserrat;
+  font-size: 3vw;
+  font-weight: 500;
+  color: #FFFFFF;
+  width: auto;
+  height: auto;
+}
+
+.Collapse-Composant-Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .Collapse-Composant-Container {
+    flex-direction: column;
+  }
+}
+.Collapse-Composant-Container li {
+  color: #FF6060;
+}/*# sourceMappingURL=index.css.map */

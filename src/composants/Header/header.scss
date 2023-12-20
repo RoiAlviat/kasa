@@ -1,0 +1,48 @@
+@mixin mobile {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+  
+
+header {
+    display: flex;
+    justify-content: space-between;
+  
+    width: 90vw;
+  
+    img {
+      @include mobile {
+  
+        width: 20vw;
+        object-fit: cover;
+      }
+    }
+  
+    .header-right-container {
+      gap: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+      width: auto;
+  
+      a {
+        text-decoration: none;
+        width: auto;
+        font-family: Montserrat;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 34px;
+        letter-spacing: 0em;
+        text-align: right;
+        color: #FF6060;
+        ;
+        @include mobile {
+          font-size: 3vw;
+        }
+      }
+  
+    }
+  
+  }
