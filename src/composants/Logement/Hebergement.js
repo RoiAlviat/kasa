@@ -5,7 +5,6 @@ import '../Logement/Hebergements.css'
 
 function Hebergement() {
   const { id } = useParams();
-  const [appartements, setAppartements] = useState([]);
   const [idPictures, setIdPictures] = useState([]);
   const [namesPictures, setNamePictures] = useState()
   const [locationPictures, setLocationPictures] = useState()
@@ -13,27 +12,12 @@ function Hebergement() {
   const [hostPictures, setHostPictures] = useState({})
   const [equipmentsPictures, setEquipmentsPicutres] = useState([])
   const [descriptionPictures, setDescritptionPictures] = useState()
-  const [isEquipementOpen, setEquipementOpen] = useState(true)
-  const [isDescriptionOpen, setDescriptionOpen] = useState(true)
   const [imgIndex, setImgIndex] = useState(0)
-
-  const images = []
-
-  const test = document.querySelector("footer")
-
-  const toggleEquipement = () => {
-    setEquipementOpen((equipOpen) => !equipOpen);
-  };
-  
-  const toggleDescription = () => {
-    setDescriptionOpen((descOpen) => !descOpen);
-  };
   
   useEffect(() => {
     fetch("../logements.json")
     .then((res) => res.json())
     .then((data) => {
-      setAppartements(data);
       const dataFind = data.find((appartement) => appartement.id === id);
       if (dataFind) {
         setIdPictures(dataFind.pictures);

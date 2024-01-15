@@ -2,16 +2,14 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Accueil from "./pages/Accueil";
 import Error from "./pages/Error";
-import Logement from "./pages/Logement";
 import { useState } from "react";
 import { useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
 
 import About from "./pages/About";
+import LogementVerif from "./composants/Verif/Verif";
 
 function App() {
   const [appartements, setAppartements] = useState([]);
-  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("../logements.json")
@@ -36,19 +34,6 @@ function App() {
   );
 }
 
-function LogementVerif({ appartements }) {
-  const { id } = useParams();
-  const logement = appartements.find((appartement) => appartement.id === id);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (!logement) {
-      navigate('/error');
-    }
-  }, [logement, navigate]);
-
-  return <Logement logement={logement} />;
-}
 
 
 

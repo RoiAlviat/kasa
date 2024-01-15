@@ -1,7 +1,6 @@
 import aboutImg from '../assets/img/aboutimg.png'
 import Collapse from '../Collapse/Collapse'
 import '../About/coreAbout.css'
-import { useState } from 'react'
 
 function CoreAbout() {
 

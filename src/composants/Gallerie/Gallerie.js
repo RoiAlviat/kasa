@@ -25,7 +25,7 @@ function Gallerie() {
             <div className="gallerie-container">
                 {appartements.map((appartement) => (
                     
-                    <Link to={`/location/${appartement.id}` } key={appartement.id}><div className="gallerie-article"><img src={appartement.cover} key={appartement.id}></img><span>{appartement.title}</span></div></Link>
+                    <Link to={`/location/${appartement.id}` } key={appartement.id}><div className="gallerie-article"><img src={appartement.cover} key={appartement.id}></img><div className='gradientlog'></div><span>{appartement.title}</span></div></Link>
                 ))}     
             </div>
         </div>

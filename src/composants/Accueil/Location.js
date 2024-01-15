@@ -1,8 +1,6 @@
-
+import '../Gallerie/Gallerie.css'
 
 function Location(props) {
-
-    console.log(props.id)
 
 return (
 <div className="gallerie-article">
